@@ -1,0 +1,77 @@
+public class EB
+{
+      Private int Consumerno;
+      Private String Consumername;
+      Private int previousMonthReading;
+      Private int currentMonthReading;
+      Private String Type;
+      public EB(String Consumerno,String Consumername,int previousMonthReading,int currentMonthReading,String Type)
+       {
+	this.Consumerno=Consumerno;
+	this.Consumername=Consumername;
+                  this.previousMonthReading=previousMonthReading;	
+	this.currentMonthReading=currentMonthReading;
+	this.Type=Type;
+       }
+   public void billamount(){
+	int unit;
+	double=amt;
+	unit=currentMonthReading-previousMonthReading;
+	if(Type=="domestic"){
+		if(unit<=100){
+			
+			amt=unit*2;
+			System.Out.Println("your bill amount is" +amt);
+		}
+                                  else if(unit>100 && unit<=200){
+			
+			amt=unit*3.5;
+			System.Out.Println("your bill amount is" +amt);
+		}
+		else if(unit>200 && unit<=500){
+			
+			amt=unit*5;
+			System.Out.Println("your bill amount is" +amt);
+		}
+		else{
+			
+			amt=unit*6;
+			System.Out.Println("your bill amount is" +amt);
+		}
+                     }
+            else if(Type="commercial"){
+if(unit<=100){
+			
+			amt=unit*3;
+			System.Out.Println("your bill amount is" +amt);
+		}
+                                  else if(unit>100 && unit<=200){
+			
+			amt=unit*5.50;
+			System.Out.Println("your bill amount is" +amt);
+		}
+		else if(unit>200 && unit<=500){
+			
+			amt=unit*7;
+			System.Out.Println("your bill amount is" +amt);
+		}
+		else{
+			
+			amt=unit*8;
+			System.Out.Println("your bill amount is" +amt);
+		}
+                     }
+	else{
+		System.Out.Println("Your type of EBconnection is invalid");
+	}
+            }
+}
+
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        EB e=new EB(1,"Ramakrishnan",4000,6500,"domestic");
+     }
+}
